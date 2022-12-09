@@ -2,6 +2,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "outDir": "dist",
+    "rootDirs": ["src", "tests"],
     "target": "es2021",
     "sourceMap": true,
     "skipLibCheck": true,
@@ -10,8 +11,8 @@
     "esModuleInterop": true,
     "baseUrl": "src",
     "paths": {
-        "@/*": ["*"],
-        "@/tests/*": ["../tests/*"]
+      "@/*": ["*"],
+      "@/tests/*": ["../tests/*"]
     },
     "strict": true
   },
