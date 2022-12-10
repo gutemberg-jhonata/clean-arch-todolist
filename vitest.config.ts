@@ -5,7 +5,7 @@ export default defineConfig({
     alias: [
       {
         find: '@',
-        replacement: 'dist'
+        replacement: 'src'
       }
     ]
   }
