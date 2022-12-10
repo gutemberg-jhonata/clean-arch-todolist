@@ -1,4 +1,4 @@
-<h1 align="center">Node.js template</h1>
+<h1 align="center">Todolist API with Clean Architecture</h1>
 
 ## 🧪 Technologies
 
@@ -7,15 +7,17 @@ This project was developed by using the following technologies:
 * Typescript
 * Editorconfig
 * Eslint
+* Vitest
 
 ## 🚀 How to use
 ```bash
-  git clone https://github.com/gutemberg-jhonata/node-template.git
-  cd node-template
+  git clone https://github.com/gutemberg-jhonata/clean-arch-todolist.git
+  cd clean-arch-todolist
+  pnpm test
 ```
 ## 💻 About
 
-A template for backend projects using typescript.
+This is a backend todolist project to pratice TDD and clean architecture.
 
 ## :memo: Licence
 
