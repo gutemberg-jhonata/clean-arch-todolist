@@ -6,13 +6,15 @@ import { LoadTasksRepo } from '@/domain/contracts/repos';
 
 describe('LoadAvaliableTasksService', () => {
   let taskRepo: MockProxy<LoadTasksRepo>;
+  let sut: LoadAvaliableTasksService;
 
   beforeAll(() => {
     taskRepo = mock();
+    sut = new LoadAvaliableTasksService(taskRepo);
   });
 
   it('should call TaskRepo with correct params', () => {
-    const sut = new LoadAvaliableTasksService(taskRepo);
+    sut.perform();
 
     expect(taskRepo.loadByIsCompleted).toBeCalledWith({
       isCompleted: false
