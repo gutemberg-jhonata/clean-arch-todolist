@@ -18,6 +18,11 @@ This project was developed by using the following technologies:
 ## 💻 About
 
 This is a backend todolist project to pratice TDD and clean architecture.
+The project was inspired by the following layout 👇
+
+<p align="center">
+  <img alt="layout" src=".github/layout.png" width="300px">
+</p>
 
 ## :memo: Licence
 
