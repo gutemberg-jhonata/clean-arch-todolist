@@ -13,6 +13,7 @@ specifiers:
   eslint-plugin-promise: ^6.0.0
   typescript: ^4.9.4
   vitest: ^0.25.6
+  vitest-mock-extended: ^1.0.7
 
 devDependencies:
   '@types/node': 18.11.12
@@ -27,6 +28,7 @@ devDependencies:
   eslint-plugin-promise: 6.1.1_eslint@8.29.0
   typescript: 4.9.4
   vitest: 0.25.6
+  vitest-mock-extended: 1.0.7_62hleffx4zst5jxpldp6hdfgaq
 
 packages:
 
@@ -1959,6 +1961,14 @@ packages:
       is-number: 7.0.0
     dev: true
 
+  /ts-essentials/9.3.0_typescript@4.9.4:
+    resolution: {integrity: sha512-XeiCboEyBG8UqXZtXl59bWEi4ZgOqRsogFDI6WDGIF1LmzbYiAkIwjkXN6zZWWl4re/lsOqMlYfe8KA0XiiEPw==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 4.9.4
+    dev: true
+
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
     dependencies:
@@ -2061,6 +2071,17 @@ packages:
       rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vitest-mock-extended/1.0.7_62hleffx4zst5jxpldp6hdfgaq:
+    resolution: {integrity: sha512-AgNlZ3yxbrQNDaBuZgkSUASeTmIcACLWTmoBujjL4rGXiiGLhjlQ12ItIZCvSjkdQ9hl+6KSdjztmLxPSIuvGA==}
+    peerDependencies:
+      typescript: 3.x || 4.x
+      vitest: '>=0.24.3'
+    dependencies:
+      ts-essentials: 9.3.0_typescript@4.9.4
+      typescript: 4.9.4
+      vitest: 0.25.6
     dev: true
 
   /vitest/0.25.6:
