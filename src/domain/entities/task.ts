@@ -3,7 +3,7 @@ type TaskProps = {
 }
 
 export class Task {
-  // private id?: boolean;
+  private _id?: string;
   private _description?: string;
   private _isCompleted = false;
 

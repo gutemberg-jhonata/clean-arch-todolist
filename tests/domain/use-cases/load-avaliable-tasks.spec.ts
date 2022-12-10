@@ -3,6 +3,7 @@ import { mock, MockProxy } from 'vitest-mock-extended';
 
 import { LoadAvaliableTasksService } from '@/domain/use-cases';
 import { LoadTasksRepo } from '@/domain/contracts/repos';
+import { Task } from '@/domain/entities';
 
 describe('LoadAvaliableTasksService', () => {
   let taskRepo: MockProxy<LoadTasksRepo>;
@@ -20,5 +21,15 @@ describe('LoadAvaliableTasksService', () => {
       isCompleted: false
     });
     expect(taskRepo.loadByIsCompleted).toHaveBeenCalledOnce();
+  });
+
+  it('should return avaliable tasks when taskRepo returns data', async () => {
+    taskRepo.loadByIsCompleted.mockResolvedValue([
+      new Task({ description: 'any_description' })
+    ]);
+
+    const avalibleTasks = await sut.perform();
+
+    expect(avalibleTasks).toHaveLength(1);
   });
 });

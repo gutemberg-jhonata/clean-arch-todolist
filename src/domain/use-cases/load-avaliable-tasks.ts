@@ -1,9 +1,10 @@
 import { LoadTasksRepo } from '@/domain/contracts/repos/task';
+import { LoadAvaliableTasks } from '@/domain/features';
 
-export class LoadAvaliableTasksService {
+export class LoadAvaliableTasksService implements LoadAvaliableTasks {
   constructor (private readonly taskRepo: LoadTasksRepo) { }
 
-  perform () {
-    this.taskRepo.loadByIsCompleted({ isCompleted: false });
+  perform (): LoadAvaliableTasks.Output {
+    return this.taskRepo.loadByIsCompleted({ isCompleted: false });
   }
 }
