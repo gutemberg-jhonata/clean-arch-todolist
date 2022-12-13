@@ -18,4 +18,8 @@ export class Task {
   public get isCompleted () {
     return this._isCompleted;
   }
+
+  public completeTask () {
+    this._isCompleted = true;
+  }
 }
